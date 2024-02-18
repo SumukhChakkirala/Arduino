@@ -14,15 +14,15 @@ void setup() {
   Serial.begin(9600);
   pinMode(XPin,INPUT);
   pinMode(YPin,INPUT);
-  pinMode(7,INPUT);
-  digitalWrite(7,HIGH);
+  pinMode(SPin,INPUT);
+  digitalWrite(SPin,HIGH);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
   XVal = analogRead(XPin);
   YVal = analogRead(YPin);
-  SVal = digitalRead(07);
+  SVal = digitalRead(SPin);
   //Serial.println(myVal);
   Pval = (5.0/1023.0) * XVal;
   Zval = (5.0/1023.0) * YVal;
